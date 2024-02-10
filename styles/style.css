@@ -71,13 +71,30 @@ body{
     transform: translateY(-100px);
 }
 
-@keyframes spin {
-    from { transform: translateY(-100px) (1,1) rotate(0deg); }
-    to { transform: translateY(-100px) scale(1.7,1.7) rotate(-90deg); }
+@keyframes translate {
+    from { transform: translateY(-100px); }
+    to { transform: translateY(-200px); }
 }
 
+@keyframes spin {
+    from { transform: translateY(-200px) scale(1,1) rotate(0deg); }
+    to { transform: translateY(-50px) scale(1.8,1.8) rotate(-90deg); }
+}
+
+/* @keyframes spin {
+    from { transform: translateY(-200px) scale(1,1) rotate(0deg); }
+    to { transform: translateY(-100px) scale(1.75,1.75) rotate(-90deg); }
+} */
+
+/* .hidden {
+    display: none;
+} */
+
 .rotated-card {
-    animation: spin 1s forwards;
+    animation: translate, spin forwards;
+    animation-duration: 1s, 1s;
+    animation-delay: 0s, 1s;
+    z-index: 999;
     /* transition: 1s;
     -webkit-transform: translateY(-100px) rotate(-90deg);
             transform: translateY(-100px) rotate(-90deg); */
