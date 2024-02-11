@@ -3,20 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Valentine's Day</title>
+    <title>NOT CLICKBAIT (trust)</title>
     <link rel="stylesheet" href="styles/style.css">
     <script type = "text/javascript" src="scripts/script.js"></script>
 </head>
 <body>
     <div class = "container">
         <div class="valentines">
-            <div id="envelope" class="envelope" onclick="" >
-                <div id = "card" class="card" onclick="rotateCard()">
+            <div id="envelope" class="envelope">
+                <div id = "card" class="card" onclick="clicked()">
+                   <div class="card-opened-front">
                     <img width= 100% height=auto src="images/card.png">
+                    </div>
+                   <div class="card-opened-back"><div class="text">mlem</div></div>
                 </div>
             </div>
             <div class="front"></div>
         </div> 
     </div>
+    <div class="message"><h4>you've got mail!<br>click to open your letter</h4></div>
 </body>
 </html>

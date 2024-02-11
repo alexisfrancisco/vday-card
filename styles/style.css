@@ -7,12 +7,13 @@ body{
 
 .container{
     position: relative;
+    height: 10%;
 }
 
 .valentines{
     position: relative;
     top: 50px;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .envelope{
@@ -57,45 +58,84 @@ body{
     top: -95px;
 }
 
-.card{
-    position: relative;
-    background: #fff; 
-    border-radius: 2px;
-    display: grid;
-    place-items: center;
-    transition: 1s;
-    outline: 0;
+.valentines:hover .card{
+    cursor: pointer;
+    transform: translateY(-100px);
 }
 
-.valentines:hover .card{
-    transform: translateY(-100px);
+.card{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    place-items: center;
+    transition: 1s;
 }
 
 @keyframes translate {
     from { transform: translateY(-100px); }
-    to { transform: translateY(-200px); }
+    to { transform: translateY(-250px); }
 }
 
 @keyframes spin {
-    from { transform: translateY(-200px) scale(1,1) rotate(0deg); }
-    to { transform: translateY(-50px) scale(1.8,1.8) rotate(-90deg); }
+    from { transform: translateY(-250px); }
+    to { transform: translateY(-25px) scale(1.6,1.6) rotate(-90deg); }
 }
 
-/* @keyframes spin {
-    from { transform: translateY(-200px) scale(1,1) rotate(0deg); }
-    to { transform: translateY(-100px) scale(1.75,1.75) rotate(-90deg); }
+/* @keyframes flip {
+    from { transform: translateY(-50px) scale(1.8,1.8) rotate(-90deg); }
+    to { transform: translateY(-50px) scale(1.8,1.8) rotate(-90deg); }
 } */
+
 
 /* .hidden {
     display: none;
 } */
 
-.rotated-card {
+.card-opened {
+    width: 100%;
+    height: 100%;
     animation: translate, spin forwards;
     animation-duration: 1s, 1s;
     animation-delay: 0s, 1s;
     z-index: 999;
+    transform-style: preserve-3d;
+    transition: 1s;
     /* transition: 1s;
     -webkit-transform: translateY(-100px) rotate(-90deg);
             transform: translateY(-100px) rotate(-90deg); */
  }  
+
+.card-opened.show {
+    rotate: y 180deg;
+}
+
+.card-opened-front, 
+.card-opened-back {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-content: center;
+    backface-visibility: hidden;
+}
+
+.card-opened-back {
+    height: 100%;
+    width: 100%;
+    transition: 1s;
+    background: #fff;
+    border: black;
+    transform: rotateY(180deg);
+    outline: dashed;
+    outline-width: 2px;
+    outline-offset: -10px;
+}
+
+.text {
+    transform: rotate(-90deg);
+}
+
+.message {
+    text-align: center;
+    position: inherit;
+    height: 5%;
+}
