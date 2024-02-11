@@ -21,7 +21,7 @@ body{
     position: relative;
     width: 300px;
     margin: 0 auto;
-    top: 5rem;
+    top: 3rem;
     /* cursor: pointer; */
 }
 
@@ -153,7 +153,7 @@ body{
     padding: 25px;
     outline: black dashed;
     border-radius: 15px;
-    top: 18rem;
+    top: 15rem;
 }
 
 @keyframes up {
@@ -191,7 +191,7 @@ body{
     width: 100px;
     height: 90px;
     margin: 0 auto;
-    transform: scale(.8, .8) translateY(140px);
+    transform: scale(.8, .8) translateY(80px);
   }
   
   #heart::before, #heart::after {
