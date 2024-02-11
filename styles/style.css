@@ -1,19 +1,27 @@
 body{
     display: grid;
     place-items: center;
-    min-height: 100ch;
-    background: #fae1dd
+    height: 95vh;
+    background: #fae1dd;
+    font-family: 'Recursive', sans-serif;
+}
+
+.main {
+    position: relative;
 }
 
 .container{
     position: relative;
-    height: 10%;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .valentines{
     animation: up 2s linear infinite;
     position: relative;
-    top: 50px;
+    width: 300px;
+    margin: 0 auto;
+    top: 5rem;
     /* cursor: pointer; */
 }
 
@@ -137,8 +145,15 @@ body{
 
 .message {
     text-align: center;
-    position: inherit;
-    height: 5%;
+    position: relative;
+    background: #fff;
+    height: 100px;
+    width: 70%;
+    margin: 0 auto;
+    padding: 25px;
+    outline: black dashed;
+    border-radius: 15px;
+    top: 18rem;
 }
 
 @keyframes up {
@@ -170,3 +185,33 @@ body{
         transform: scaleX(0.85);
     }
 }
+
+#heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+    margin: 0 auto;
+    transform: scale(.8, .8) translateY(140px);
+  }
+  
+  #heart::before, #heart::after {
+    content: "";
+    position: absolute;
+    z-index: 999;
+    width: 52px;
+    height: 80px;
+    border-radius: 50px 50px 0 0;
+    background: #e64646;
+  }
+  
+  #heart::before {
+    left: 50px;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+  }
+  
+  #heart::after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+  }
