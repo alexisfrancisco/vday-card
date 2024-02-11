@@ -22,10 +22,10 @@ function changeMsg() {
 function clicked() {
     if (click == 0) {
         openCard();
-        changeMsg()
+        changeMsg();
         click++;
     }
     else {
-        flipCard()
+        flipCard();
     }
 };
