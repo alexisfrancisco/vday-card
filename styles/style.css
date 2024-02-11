@@ -87,7 +87,7 @@ body{
 
 @keyframes spin {
     from { transform: translateY(-250px); }
-    to { transform: translateY(-25px) scale(1.8,1.8) rotate(-90deg); }
+    to { transform: translateY(-25px) scale(1.65,1.65) rotate(-90deg); }
 }
 
 /* @keyframes flip {
