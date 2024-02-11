@@ -11,6 +11,7 @@ body{
 }
 
 .valentines{
+    animation: up 2s linear infinite;
     position: relative;
     top: 50px;
     /* cursor: pointer; */
@@ -78,7 +79,7 @@ body{
 
 @keyframes spin {
     from { transform: translateY(-250px); }
-    to { transform: translateY(-25px) scale(1.6,1.6) rotate(-90deg); }
+    to { transform: translateY(-25px) scale(1.8,1.8) rotate(-90deg); }
 }
 
 /* @keyframes flip {
@@ -138,4 +139,34 @@ body{
     text-align: center;
     position: inherit;
     height: 5%;
+}
+
+@keyframes up {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+}
+
+.valentines::before{
+    content: '';
+    position: absolute;
+    width: 330px;
+    height: 25px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.3);
+    top: 265px;
+    left: -15px;
+    animation: scale 2s linear infinite;
+}
+
+@keyframes scale {
+    0%, 100% {
+        transform: scaleX(1);
+    }
+    50% {
+        transform: scaleX(0.85);
+    }
 }

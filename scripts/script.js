@@ -13,10 +13,16 @@ function flipCard() {
     card.classList.toggle("show");
 };
 
+function changeMsg() {
+    document.getElementById("msg1").innerHTML = "there's a message for you!";
+    document.getElementById("msg2").innerHTML = "click to <b>flip the card</b>";
+}
+
 
 function clicked() {
     if (click == 0) {
         openCard();
+        changeMsg()
         click++;
     }
     else {
