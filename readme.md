@@ -1,8 +1,6 @@
 # Valentine's Day Card
 
-# TODO
-- Write messages
-- dotted borders formatting
+# potential improvements
 - potential for a reset button or another message i.e "refesh to reset card"
 
 
